@@ -40,33 +40,6 @@ public class ${table.upperCamelName}Service {
         return this.daoRouter.query("${table.upperCamelName}.load${table.upperCamelName}ForPage",pagination);
     }
 
-    /**
-     * 创建
-     * @param ${table.lowerCamelName}VO
-     * @return
-     */
-    public void create(${table.upperCamelName}VO ${table.lowerCamelName}VO) {
-        this.daoRouter.insert("${table.upperCamelName}.insert${table.upperCamelName}", ${table.lowerCamelName}VO);
-    }
-
-    /**
-     * 更新
-     * @param ${table.lowerCamelName}VO
-     * @return
-     */
-    public void update(${table.upperCamelName}VO ${table.lowerCamelName}VO) {
-        this.daoRouter.update("${table.upperCamelName}.update${table.upperCamelName}", ${table.lowerCamelName}VO);
-    }
-
-    /**
-     * 删除
-     * @param ${table.lowerCamelName}VO
-     * @return
-     */
-    public void delete(${table.upperCamelName}VO ${table.lowerCamelName}VO) {
-        this.daoRouter.update("${table.upperCamelName}.delete${table.upperCamelName}", ${table.lowerCamelName}VO);
-    }
-
     @Autowired
     private DaoRouter daoRouter;
 }

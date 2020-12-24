@@ -41,14 +41,14 @@ public class ${table.upperCamelName}Controller extends BaseController {
 
     @PostMapping("")
     @ApiOperation(value = "创建")
-    public ResponseData create(${table.upperCamelName}VO ${table.lowerCamelName}VO) throws Exception {
+    public ResponseData create(@RequestBody ${table.upperCamelName}VO ${table.lowerCamelName}VO) throws Exception {
         this.${table.lowerCamelName}Service.create(${table.lowerCamelName}VO);
         return ResponseDataUtil.buildSuccess();
     }
 
     @PatchMapping("{id}")
     @ApiOperation(value = "修改")
-    public ResponseData create(@PathVariable Long id, ${table.upperCamelName}VO ${table.lowerCamelName}VO) throws Exception {
+    public ResponseData update(@PathVariable Long id, ${table.upperCamelName}VO ${table.lowerCamelName}VO) throws Exception {
         ${table.lowerCamelName}VO.setId(id);
         this.${table.lowerCamelName}Service.update(${table.lowerCamelName}VO);
         return ResponseDataUtil.buildSuccess();
