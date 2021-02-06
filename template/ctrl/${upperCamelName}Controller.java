@@ -48,7 +48,7 @@ public class ${table.upperCamelName}Controller extends BaseController {
 
     @PatchMapping("{id}")
     @ApiOperation(value = "修改")
-    public ResponseData update(@PathVariable Long id, ${table.upperCamelName}VO ${table.lowerCamelName}VO) throws Exception {
+    public ResponseData update(@PathVariable Long id,@RequestBody ${table.upperCamelName}VO ${table.lowerCamelName}VO) throws Exception {
         ${table.lowerCamelName}VO.setId(id);
         this.${table.lowerCamelName}Service.update(${table.lowerCamelName}VO);
         return ResponseDataUtil.buildSuccess();
